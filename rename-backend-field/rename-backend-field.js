@@ -7,5 +7,6 @@
 onElement(".NK1446B-b-R-com-clubdesk-client-framework-bundle-css-CommonCss-label", el => {
     if (el.textContent.includes("Participants")) {
         el.textContent = "Eligibles:";
+        return true;
     }
 })

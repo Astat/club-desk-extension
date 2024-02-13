@@ -12,15 +12,18 @@ function topDocument() {
  * The corresponding element will be hidden by default, until the callback is processed (hence avoid element flashing).
  * The call receives the found javascript Element as unique parameter
  */
-function onElement(selector, callback) {
+function onElement(selector, callback, singleElementExpected = false) {
     const style = topDocument().createElement("style");
     style.textContent = selector + `:not(.` + elementFoundClassName + `) {
     opacity: 0;
   }`;
     topDocument().head.appendChild(style);
-    setInterval(() => {
+    var timer = setInterval(() => {
         topDocument().querySelectorAll(selector + ":not(." + elementFoundClassName + ")").forEach(el => {
             el.classList.add(elementFoundClassName);
+            if(singleElementExpected) {
+                clearInterval(timer);
+            }
             callback(el);
         });
     }, 100);

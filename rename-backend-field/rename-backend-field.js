@@ -8,4 +8,4 @@ onElement(".NK1446B-b-R-com-clubdesk-client-framework-bundle-css-CommonCss-label
     if (el.textContent.includes("Participants")) {
         el.textContent = "Eligibles:";
     }
-}, true)
+})

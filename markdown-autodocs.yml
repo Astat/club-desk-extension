@@ -1,9 +1,7 @@
 name: Markdown Autodocs
 
 on:
-  push:
-    branches:
-      - '**'
+  push
 
 jobs:
   auto-update-readme:

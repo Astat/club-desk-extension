@@ -37,3 +37,6 @@ function onElement(selector, callback) {
 console.log("loaded");
 ```
 <!-- MARKDOWN-AUTO-DOCS:END -->
+
+<!-- MARKDOWN-AUTO-DOCS:START (CODE:src=./limit-participants/main.js) -->
+<!-- MARKDOWN-AUTO-DOCS:END -->

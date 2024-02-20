@@ -15,3 +15,4 @@ jobs:
         with:
           commit_author: Astat
           commit_message: 'docs: update readme'
+          output_file_paths: '[./EXPORT.md]'

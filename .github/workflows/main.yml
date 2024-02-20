@@ -1,15 +1,16 @@
-name: Dynamic Template
+name: Markdown Autodocs
 
 on:
   push
 
 jobs:
-  update_templates:
-    name: "Update Templates"
+  auto-update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: "💫  Dynamic Template Render"
-        uses: varunsridharan/action-dynamic-readme@main
+      - uses: actions/checkout@v2
+      - name: Markdown autodocs
+        uses: dineshsonachalam/markdown-autodocs@v1.0.7
         with:
-          files: |
-            EXPORT.md
+          commit_author: Astat
+          commit_message: 'docs: update readme'
+          output_file_paths: '[./EXPORT.md]'
